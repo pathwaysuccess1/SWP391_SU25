@@ -1,10 +1,11 @@
 package com.swp391.superapp.bloodsupport.service;
 
-import com.swp391.superapp.bloodsupport.service.serviceimpl.ProfileService;
+
+import com.swp391.superapp.bloodsupport.service.serviceimpl.UserService;
 
 import java.util.List;
 
-public class ProfileService implements ProfileService {
+public class ProfileService implements UserService {
 
     @Override
     public void addProfile(Object Profile) {
