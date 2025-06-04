@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from "../../components/sections/header.tsx";
-import Footer from "../../components/sections/footer.tsx";
 import WrapperSection from "../../components/sections/wrapperSection.tsx";
 import GroupedHeading from "../../components/sections/GroupedHeading.tsx";
 
@@ -270,7 +268,6 @@ const Blog: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            <Header />
             <WrapperSection>
                 <div className="max-w-7xl mx-auto py-8">
                     <GroupedHeading
@@ -379,7 +376,6 @@ const Blog: React.FC = () => {
                     </div>
                 </div>
             </WrapperSection>
-            <Footer />
         </div>
     );
 };
