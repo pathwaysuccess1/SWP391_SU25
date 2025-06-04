@@ -111,13 +111,13 @@ export const Header: React.FC = () => {
                     Hồ sơ
                   </Button>
                 </Link>
-                <Link to="/login" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/auth" onClick={() => setIsMenuOpen(false)}>
                   <Button variant="outline" size="sm" className="w-full">
                     <LogIn className="h-4 w-4 mr-2" />
                     Đăng nhập
                   </Button>
                 </Link>
-                <Link to="/register" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/auth" onClick={() => setIsMenuOpen(false)}>
                   <Button size="sm" className="w-full">
                     Đăng ký
                   </Button>

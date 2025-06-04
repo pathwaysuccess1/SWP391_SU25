@@ -22,7 +22,7 @@ const Home: React.FC = () => {
                 Hãy trở thành người anh hùng thầm lặng trong cuộc chiến cứu sống.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/register">
+                <Link to="/donate">
                   <Button size="lg" className="bg-white text-red-600 hover:bg-red-50 w-full sm:w-auto">
                     <Heart className="h-5 w-5 mr-2" />
                     Đăng ký hiến máu
@@ -233,7 +233,7 @@ const Home: React.FC = () => {
             Đăng ký ngay để tham gia vào cộng đồng những người có trái tim nhân ái.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/register">
+            <Link to="/donor-register">
               <Button size="lg" className="bg-white text-red-600 hover:bg-red-50">
                 <Heart className="h-5 w-5 mr-2" />
                 Đăng ký hiến máu ngay
