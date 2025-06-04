@@ -11,6 +11,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import Profile from "./pages/profile";
 import MapPage from "./pages/Map";
+import Blog from "./pages/blogs/blogPage";
 // Forms
 import DonorRegisterForm from "./forms/DonorRegisterForm";
 import RequestBloodForm from "./forms/RequestBloodForm";
@@ -27,8 +28,9 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/donate" element={<DonorRegisterForm />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/need-blood" element={<RequestBloodForm />} />
+            <Route path="/need-blood-donate" element={<RequestBloodForm />} />
             <Route path="/map" element={<MapPage />} />
+            <Route path="/blog" element={<Blog />} />
             {/* Thêm các route khác nếu cần */}
           </Routes>
         </main>
