@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button } from '../components/button';
+import { Button } from '../components/sections/button';
 import { Mail, User, Phone, Calendar, Droplet, Layers } from 'lucide-react';
 
 const DonorRegisterForm: React.FC = () => {

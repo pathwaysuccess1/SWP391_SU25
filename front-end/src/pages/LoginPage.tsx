@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button } from '../components/button';
+import { Button } from '../components/sections/button';
 import { Mail, Lock } from 'lucide-react';
 
 const LoginPage: React.FC = () => {
