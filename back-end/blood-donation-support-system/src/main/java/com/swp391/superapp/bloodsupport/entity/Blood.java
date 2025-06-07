@@ -14,7 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Blood")
+@Table(name = "blood")
 public class Blood {
     @Id
     @Column(name ="blood_code")

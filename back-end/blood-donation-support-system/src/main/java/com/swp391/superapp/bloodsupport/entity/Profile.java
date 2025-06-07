@@ -8,25 +8,52 @@
  */
 package com.swp391.superapp.bloodsupport.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.time.LocalDate;
+import java.util.Date;
 
-
+@Entity
+@Table(name = "profile")
 public class Profile {
+    @Id
+    @Column(name = "account_id")
     private String accountId;
+
+    @Column(name ="name")
     private String name;
+
+    @Column(name ="phone")
     private String phone;
-    private LocalDate dob; //xem lại
+
+    @Column(name ="date_of_birth")
+    private Date dob; //xem lại
+
+    @Column(name ="gender")
     private boolean gender;
+
+    @Column(name ="address")
     private String address;
+
+    @Column(name ="role")
     private Role role;
+
+    @Column(name ="number_of_blood_donation")
     private int numberOfBloodDonation;
+
+    @Column(name ="blood_code")
     private Blood bloodCode;
+
+    @Column(name ="rest_date")
     private LocalDate restDate;
 
     public Profile() {
     }
 
-    public Profile(String accountId, String name, String phone, LocalDate dob, boolean gender, String address, Role role, int numberOfBloodDonation, Blood bloodCode, LocalDate restDate) {
+    public Profile(String accountId, String name, String phone, Date dob, boolean gender, String address, Role role, int numberOfBloodDonation, Blood bloodCode, LocalDate restDate) {
         this.accountId = accountId;
         this.name = name;
         this.phone = phone;
@@ -63,11 +90,11 @@ public class Profile {
         this.phone = phone;
     }
 
-    public LocalDate getDob() {
+    public Date getDob() {
         return dob;
     }
 
-    public void setDob(LocalDate dob) {
+    public void setDob(Date dob) {
         this.dob = dob;
     }
 
