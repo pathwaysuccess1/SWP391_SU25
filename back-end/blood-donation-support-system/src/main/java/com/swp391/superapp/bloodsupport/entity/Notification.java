@@ -1,10 +1,27 @@
 package com.swp391.superapp.bloodsupport.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "notification")
 public class Notification {
+    @Id
+    @Column(name = "notification_id")
     private int notificationId;
+
+    @Column(name ="account_id")
     private Account accountId;
+
+    @Column(name ="title")
     private String title;
+
+    @Column(name ="content")
     private String content;
+
+    @Column(name ="img")
     private String img;
 
     public int getNotificationId() {

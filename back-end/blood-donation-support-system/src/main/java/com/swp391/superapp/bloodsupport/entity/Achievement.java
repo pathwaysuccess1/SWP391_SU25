@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Achievement")
+@Table(name = "achievement")
 public class Achievement {
     @Id
     @Column(name ="achievement_name")
