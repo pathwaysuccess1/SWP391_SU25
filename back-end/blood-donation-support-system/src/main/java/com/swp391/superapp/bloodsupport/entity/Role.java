@@ -8,10 +8,21 @@
  */
 package com.swp391.superapp.bloodsupport.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "role")
 public class Role {
 
+    @Column(name ="role_id")
     private int roleId;
+
+    @Column(name ="role_name")
     private String roleName;
+
+    @Column(name ="description")
     private String description;
 
     public Role() {
