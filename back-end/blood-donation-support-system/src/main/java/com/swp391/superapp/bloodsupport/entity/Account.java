@@ -8,15 +8,42 @@
  */
 package com.swp391.superapp.bloodsupport.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "Account")
 public class Account {
+    @Id
+    @Column(name = "id" )
     private String accountId;
+
+    @Column(name = "name")
     private String userName;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name ="password")
     private String password;
+
+    @Column(name ="is_active")
     private boolean isActive;
+
+    @Column(name ="createion_date")
     private LocalDate creationDate;
+
+    @Column(name ="role")
+    private Role role;
+
+    @Column(name ="Hospital")
+    private Hospital hospital;
+
+
 
     public Account() {
     }
