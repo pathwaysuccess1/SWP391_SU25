@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/sections/button';
 import { Mail, User, Phone, Calendar, Droplet, Layers } from 'lucide-react';
@@ -18,7 +18,12 @@ const DonorRegisterForm: React.FC = () => {
   const [success, setSuccess] = useState(false);
 
   const navigate = useNavigate();
-
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+    }
+  }, [navigate]);
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: Gửi dữ liệu đăng ký lên server

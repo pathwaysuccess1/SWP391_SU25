@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import {  useNavigate } from 'react-router-dom';
 import { User, Mail, Phone, Calendar, MapPin, Droplet } from 'lucide-react';
 
 const Profile: React.FC = () => {
   // Dữ liệu mẫu, sau này thay bằng fetch từ API/backend
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+    }
+  }, [navigate]);
   const [profile] = useState({
     name: 'Nguyễn Văn A',
     phone: '0123456789',
@@ -14,7 +22,9 @@ const Profile: React.FC = () => {
     bloodType: 'O+',
     email: 'nguyenvana@email.com',
     username: 'nguyenvana',
-  });
+  }
+    
+);
 
   return (
     <div className="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg mt-8">

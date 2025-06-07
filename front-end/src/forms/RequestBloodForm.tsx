@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../components/sections/button";
 import {
   Calendar,
@@ -22,7 +23,14 @@ const RequestBloodForm: React.FC = () => {
   const [volumn, setVolumn] = useState("");
   const [quantity, setQuantity] = useState("");
   const [success, setSuccess] = useState(false);
-
+  const navigate = useNavigate();
+    // Thêm kiểm tra đăng nhập ở đây
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+    }
+  }, [navigate]);
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: Gửi dữ liệu lên server
